@@ -42,9 +42,12 @@ public class Student
 	
 	public boolean setMatch()
 	{
-		this.match = true;
-		
-		return match;
+		if(match) {
+			match = false;
+			return false;
+		}
+		match = true;
+		return true;
 	}
 	
 	public int compare(Student st)
